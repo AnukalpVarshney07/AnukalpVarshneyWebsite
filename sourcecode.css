@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main layout */
+.source-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* LEFT (Video) */
+.left {
+  flex: 1;
+  overflow: hidden;
+}
+
+.left video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills fully */
+}
+
+/* RIGHT (Content) */
+.right {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content box */
+.content {
+  max-width: 400px;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+  color: #2575fc;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.contact-btn {
+  display: inline-block;
+  padding: 14px 35px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 768px) {
+  .source-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left {
+    height: 250px;
+  }
+
+  .right {
+    padding: 40px 20px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
+}
